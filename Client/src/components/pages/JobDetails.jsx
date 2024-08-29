@@ -134,7 +134,7 @@ const JobDetails = () => {
               No accepted applicants yet
             </Typography>
           ) : (
-            acceptedApplicants.map((applicant) => (
+            acceptedApplicants?.map((applicant) => (
               <Grid item xs={12} sm={6} md={4} key={applicant._id}>
                 <AcceptedApplicantCard applicant={applicant} jobId={jobId} />
               </Grid>

@@ -1,4 +1,4 @@
-import { useMutation } from 'react-query';
+import { useMutation, useQueryClient } from 'react-query';
 import axios from 'axios';
 import { useAuth } from '../../context/auth';
 
@@ -12,6 +12,7 @@ function parseJwt(token) {
 
 export const usePostJob = () => {
   const { token } = useAuth();
+  const queryClient = useQueryClient();
 
   const postJob = async (jobData) => {
     const decodedToken = parseJwt(token);
@@ -26,7 +27,7 @@ export const usePostJob = () => {
       },
     });
 
-    if (response.status !== 200) {
+    if (response.status !== 201) {
       throw new Error('Failed to post job');
     }
 
