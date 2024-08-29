@@ -1,0 +1,40 @@
+.app-navbar {
+    background-color: #007bff; /* Bootstrap primary color */
+  }
+  
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 40px; /* Adjust the height to fit your design */
+    width: auto; /* Ensure aspect ratio is maintained */
+  }
+  
+  .navbar-nav {
+    margin-left: auto; /* Align links to the right */
+  }
+  
+  .navbar-nav a,
+  .logout-button {
+    color: white !important;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .logout-button {
+    background: transparent;
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    margin-left: 20px; /* Space between links and button */
+  }
+  
+  .logout-button:hover {
+    background-color: white;
+    color: #007bff;
+  }
+  

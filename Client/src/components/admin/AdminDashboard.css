@@ -1,0 +1,125 @@
+/* Admin Dashboard Main Styles */
+.admin-dashboard {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  /* Search Bar Styles */
+  .search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  /* Grid Layout for Hiring Managers */
+  .hiring-managers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Individual Hiring Manager Card */
+  .hiring-manager-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .hiring-manager-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Hiring Manager Information */
+  .hiring-manager-info h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .hiring-manager-info p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+  }
+  
+  /* Status Badge Styles */
+  .status-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .status-badge.approved {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .status-badge.pending {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  /* Action Buttons */
+  .action-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .approve-btn, .deny-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .approve-btn {
+    background-color: #28a745;
+  }
+  
+  .approve-btn:hover {
+    background-color: #218838;
+  }
+  
+  .deny-btn {
+    background-color: #dc3545;
+  }
+  
+  .deny-btn:hover {
+    background-color: #c82333;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    .hiring-managers-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .search-bar {
+      flex-direction: column;
+    }
+  
+    .search-bar input {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  
