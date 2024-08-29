@@ -1,0 +1,50 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - main
+      - 'feature/*'
+  pull_request:
+    branches:
+      - main
+      - 'feature/*'
+
+jobs:
+  api-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js for API
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies for API
+        working-directory: ./API
+        run: npm install
+
+      - name: Run tests for API
+        working-directory: ./API
+        run: npm test
+
+  client-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js for Client
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies for Client
+        working-directory: ./Client
+        run: npm install
+
+      - name: Run Jest tests for Client
+        working-directory: ./Client
+        run: npm test
